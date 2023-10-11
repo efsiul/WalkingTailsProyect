@@ -1,7 +1,7 @@
 export const ColorsStyle = {
-    primary             : '#Ed7E06',
-    secundary           : '#FFFF',
-    tertiary            : '#70BAAD',
+    primary             : '#0A9396',
+    secundary           : '#001219',
+    tertiary            : '#0A9399',
     borderTertiary      : '#5B9E91',
     quaternary          : '#FFA305',
     borderQuaternary    : '#FF8F05',
