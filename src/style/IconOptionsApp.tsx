@@ -1,23 +1,23 @@
-import React                    from 'react';
-import MaterialCommunityIcons   from 'react-native-vector-icons/MaterialCommunityIcons';
-import { ColorsStyle }          from './ColorsStyle';
+import React from 'react';
+import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
+import { ColorsStyle } from './ColorsStyle';
 
-export  const IconOptionsApp = (_name : string = '', _color : string = ColorsStyle.secundary) => {
+export const IconOptionsApp = (_name: string = '', _color: string = ColorsStyle.secundary) => {
     let iconName: string = '';
     let sizeIcon: number = 0;
 
     switch (_name) {
         case 'Volver al inicio':
-            iconName = 'home-account';
+            iconName = 'paw';
             sizeIcon = 40;
             break;
         case 'Configuración':
-            iconName = 'cog';
+            iconName = 'paw';
             sizeIcon = 40;
             break;
 
         case 'Registro':
-            iconName = 'account-plus';
+            iconName = 'paw';
             sizeIcon = 40;
             break;
 
@@ -26,18 +26,18 @@ export  const IconOptionsApp = (_name : string = '', _color : string = ColorsSty
             sizeIcon = 40;
             break;
 
-        case 'Videollamada':
-            iconName = 'headset';
+        case 'BUSQUEDA':
+            iconName = 'magnify';
+            sizeIcon = 30;
+            break;
+
+        case 'CAMINATA':
+            iconName = 'dog-service';
             sizeIcon = 40;
             break;
 
-        case 'HOSPITALES':
-            iconName = 'hospital-building';
-            sizeIcon = 40;
-            break;
-
-        case 'APH':
-            iconName = 'ambulance';
+        case 'BANO':
+            iconName = 'shower';
             sizeIcon = 40;
             break;
 
@@ -46,8 +46,8 @@ export  const IconOptionsApp = (_name : string = '', _color : string = ColorsSty
             sizeIcon = 40;
             break;
 
-        case 'HGM':
-            iconName = 'hospital-marker';
+        case 'ENFERMERIA':
+            iconName = 'hospital';
             sizeIcon = 40;
             break;
 
@@ -60,15 +60,23 @@ export  const IconOptionsApp = (_name : string = '', _color : string = ColorsSty
             sizeIcon = 30;
             break;
         case 'timer':
-            iconName = 'timer';
+            iconName = 'timer-sand';
+            sizeIcon = 30;
+            break;
+        case 'perro':
+            iconName = 'dog';
+            sizeIcon = 30;
+            break;
+        case 'cool':
+            iconName = 'emoticon-cool-outline';
             sizeIcon = 30;
             break;
     }
     return (
-            <MaterialCommunityIcons
-            name    ={iconName}
-            size    = {sizeIcon}
-            color   = {_color}
+        <MaterialCommunityIcons
+            name={iconName}
+            size={sizeIcon}
+            color={_color}
         />
     );
 };

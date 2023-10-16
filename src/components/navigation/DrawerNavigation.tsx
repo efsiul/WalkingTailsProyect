@@ -18,6 +18,8 @@ import { ProfileScreen }          from '../../screens/ProfileScreen';
 import { DrawerStyles }           from '../../style/DrawerNavigatorStyle';
 import { ColorsStyle }            from '../../style/ColorsStyle';
 import { IconOptionsApp }         from '../../style/IconOptionsApp';
+import PlanningScreen from '../../screens/PlanningScreen';
+
 
 
 const Drawer = createDrawerNavigator();
@@ -56,6 +58,12 @@ const DrawerNavigator = () =>{
                 name      = "RegisterScreen"
                 options   = {{title: 'Registro'}}
                 component = {RegisterScreen}
+            />
+
+            <Drawer.Screen
+                name = 'PlanningScreen'
+                options = {{title:'Viaje'}}
+                component={PlanningScreen}
             />
 
             </Drawer.Navigator>
@@ -107,13 +115,13 @@ const DrawerNavigator = () =>{
                 <TouchableOpacity
                     style   = { DrawerStyles.button}
                     onPress = { () =>{
-                                        //TODO: Logica para direccionar a pantalla pefil de usuario
+                                        navigation.navigate('PlanningScreen')
                                     }}
                     >
                     <View style = {DrawerStyles.textIcon}>
                         {IconOptionsApp('Configuración')}
                         <Text style = {DrawerStyles.text_botton}>
-                        Perfil Usuario
+                        Planear paseo
                         </Text>
                     </View>
                 </TouchableOpacity>
