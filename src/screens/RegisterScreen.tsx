@@ -25,7 +25,7 @@ const login_validation_schema = yup.object().shape({
 
 interface Props extends StackScreenProps<any, any> { }
 
-export const RegisterHGMScreen = ({ navigation }: Props) => {
+export const RegisterScreen = ({ navigation }: Props) => {
     const [showModal, setShowModal]    = useState(false);
 
     return (
@@ -34,10 +34,14 @@ export const RegisterHGMScreen = ({ navigation }: Props) => {
                 <View style = {[LoginStyles.box, LoginStyles.boxBody]}>
                     <Formik
                         initialValues       =   {{
-                            canal               : 'HGM',
-                            worker_document         : '',
-
-
+                            email               : '',
+                            name_owner          : '',
+                            last_name_owner     : '',
+                            pets_name           : '',
+                            race                : '',
+                            age_pet             : '',
+                            password            : '',
+                            
                         }}
                         validateOnMount     =   {true}
                         validationSchema    =   {login_validation_schema}
@@ -58,14 +62,14 @@ export const RegisterHGMScreen = ({ navigation }: Props) => {
                                     <TextInput
                                         style                   =   {LoginStyles.inputText}
                                         placeholderTextColor    =   {ColorsStyle.placeholderColor}
-                                        placeholder             =   "Digite su número de documento:"
-                                        onChangeText            =   {handleChange('worker_document')}
-                                        onBlur                  =   {handleBlur('worker_document')}
-                                        value                   =   {values.worker_document}
+                                        placeholder             =   "miuser@example.com"
+                                        onChangeText            =   {handleChange('email')}
+                                        onBlur                  =   {handleBlur('email')}
+                                        value                   =   {values.email}
                                         keyboardType            =   "default"
                                     />
-                                    {errors.worker_document && touched.worker_document &&
-                                        (<Text style    =   {LoginStyles.errorText}>{errors.worker_document}</Text>)}
+                                    {errors.email && touched.email &&
+                                        (<Text style    =   {LoginStyles.errorText}>{errors.email}</Text>)}
 
                                     <View style = {LoginStyles.containerButton}>
                                         <View >
@@ -124,4 +128,4 @@ export const RegisterHGMScreen = ({ navigation }: Props) => {
     );
 };
 
-export default RegisterHGMScreen;
+export default RegisterScreen;
