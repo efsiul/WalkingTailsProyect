@@ -5,11 +5,13 @@ import {ColorsStyle}            from '../../style/ColorsStyle';
 import LoginScreen              from '../../screens/LoginScreen';
 import RegisterScreen           from '../../screens/RegisterScreen';
 import { ProfileScreen }        from '../../screens/ProfileScreen';
+import PlanningScreen from '../../screens/PlanningScreen';
 
 export type RootStackParams = {
     LoginScreen          : undefined;
     RegisterScreen       : undefined;
     ProfileScreen        : undefined;
+    PlanningScreen       : undefined;
 };
 
 const Stack = createStackNavigator();
@@ -41,6 +43,11 @@ const StackNavigatorHGM = () => {
                 name          = "ProfileScreen"
                 options       = {{title: 'Perfil'}}
                 component     = {ProfileScreen}
+            />
+            <Stack.Screen
+                name = 'PlanningScreen'
+                options = {{title:'Viaje'}}
+                component={PlanningScreen}
             />
 
             </Stack.Navigator>
