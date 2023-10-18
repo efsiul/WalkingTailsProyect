@@ -12,13 +12,15 @@ import {
   DrawerContentScrollView }       from '@react-navigation/drawer';
 import { Image }                  from 'react-native-elements';
 import { HomeScreen }             from '../../screens/HomeScreen';
-import RegisterScreen             from '../../screens/RegisterScreen';
+import RegisterOwnerPetScreen             from '../../screens/RegisterOwnerPetScreen';
 import LoginScreen                from '../../screens/LoginScreen';
 import { ProfileScreen }          from '../../screens/ProfileScreen';
 import { DrawerStyles }           from '../../style/DrawerNavigatorStyle';
 import { ColorsStyle }            from '../../style/ColorsStyle';
 import { IconOptionsApp }         from '../../style/IconOptionsApp';
-import PlanningScreen from '../../screens/PlanningScreen';
+import PlanningScreen             from '../../screens/PlanningScreen';
+import RegisterWalkerScreen from '../../screens/RegisterWalkerScreen';
+import { RegisterTypeScreen } from '../../screens/RegisterTypeScreen';
 
 
 
@@ -40,12 +42,12 @@ const DrawerNavigator = () =>{
             >
             <Drawer.Screen
                 name      = "HomeScreen"
-                options   = {{title: ''}}
+                options   = {{title: 'HomeScreen'}}
                 component = {HomeScreen}
             />
             <Drawer.Screen
                 name      = "LoginScreen"
-                options   = {{title: ''}}
+                options   = {{title: 'LoginScreen'}}
                 component = {LoginScreen}
             />
             <Drawer.Screen
@@ -53,11 +55,20 @@ const DrawerNavigator = () =>{
                 options   = {{title: 'Perfil'}}
                 component = {ProfileScreen}
             />
-
             <Drawer.Screen
-                name      = "RegisterScreen"
-                options   = {{title: 'Registro'}}
-                component = {RegisterScreen}
+                name        = "RegisterTypeScreen"
+                options     = {{title: 'RegisterTypeScreen'}}
+                component   = {RegisterTypeScreen}
+            />
+            <Drawer.Screen
+                name        = "RegisterOwnerPetScreen"
+                options     = {{title: 'RegisterOwnerPetScreen'}}
+                component   = {RegisterOwnerPetScreen}
+            />
+            <Drawer.Screen
+                name        = "RegisterWalkerScreen"
+                options     = {{title: 'RegisterWalkerScreen'}}
+                component   = {RegisterWalkerScreen}
             />
 
             <Drawer.Screen
@@ -148,7 +159,7 @@ const DrawerNavigator = () =>{
                                         <TouchableOpacity
                                             style       =   {DrawerStyles.subButton}
                                             onPress     =   { ()=> {setShowModal(false);
-                                                                    navigation.navigate('RegisterPaseador');}}
+                                                                    navigation.navigate('RegisterWalkerScreen');}}
                                         >
                                             <Text style =   {DrawerStyles.text_botton}>Paseador</Text>
                                         </TouchableOpacity>
@@ -157,7 +168,7 @@ const DrawerNavigator = () =>{
                                         <TouchableOpacity
                                             style       =   {DrawerStyles.subButton}
                                             onPress     = { ()=> {setShowModal(false);
-                                                                    navigation.navigate('RegisterDueno');}}
+                                                                    navigation.navigate('RegisterOwnerPetScreen');}}
                                         >
                                             <Text style =   {DrawerStyles.text_botton}>Dueño de mascota</Text>
                                         </TouchableOpacity>

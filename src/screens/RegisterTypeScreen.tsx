@@ -20,8 +20,7 @@ interface Props extends DrawerScreenProps<any, any>{}
 
 
 
-export const HomeScreen = ({ navigation }: Props) => {
-    const [showModal, setShowModal]     = useState(false);
+export const RegisterTypeScreen = ({ navigation }: Props) => {
 
     useEffect(() => {
         navigation.setOptions({
@@ -40,18 +39,15 @@ export const HomeScreen = ({ navigation }: Props) => {
                 fontSize            : 30,
                 fontWeight          : 'bold',
                 color               : ColorsStyle.secundary,
-
             },
-
-        }
-        );
+        });
     }, []);
 
 
     return (
 
         <ImageBackground
-        source={require('../assets/imageBackground.jpeg')}
+        source={require('../assets/paseoFeliz.png')}
         style={HomeStyles.container}
         >
             <View style   = {[HomeStyles.box, HomeStyles.boxHeader]}>
@@ -61,7 +57,7 @@ export const HomeScreen = ({ navigation }: Props) => {
                 />
             </View>
             <ScrollView>
- 
+
                 <View style = {[HomeStyles.box, HomeStyles.boxBody]}>
                     <View style = {HomeStyles.containerGroupButtons}>
                         <View style = {HomeStyles.containerButtons}>
@@ -69,40 +65,23 @@ export const HomeScreen = ({ navigation }: Props) => {
                                 <TouchableOpacity
                                     style   = { HomeStyles.button}
                                     onPress = { ()=> {
-                                            navigation.navigate('LoginScreen');}
+                                            navigation.navigate('RegisterWalkerScreen');}
                                         }
                                 >
-                                    {IconOptionsApp('perro')}
-                                    <Text style ={HomeStyles.textButton}> Login </Text>
+                                    {IconOptionsApp('CAMINATA')}
+                                    <Text style ={HomeStyles.textButton}> Registro paseador </Text>
                                 </TouchableOpacity>
                             </View>
 
                             <View>
                                 <TouchableOpacity
                                     style   = { HomeStyles.button}
-                                    onPress = { ()=> navigation.navigate('RegisterTypeScreen')}
+                                    onPress = { ()=> navigation.navigate('RegisterOwnerPetScreen')}
                                 >
-                                    {IconOptionsApp('BUSQUEDA')}
-                                    <Text style ={HomeStyles.textButton}> Tipo de registro </Text>
+                                    {IconOptionsApp('perro')}
+                                    <Text style ={HomeStyles.textButton}> Registro Dueño </Text>
                                 </TouchableOpacity>
                             </View>
-                        </View>
-
-
-                        <View style = {HomeStyles.containerButtons}>
-                            <View>
-                                    <TouchableOpacity
-                                        style   = { HomeStyles.buttonHorizontal}
-                                        onPress = { ()=> {
-                                                        setShowModal(true);
-                                        }}
-                                    >
-                                        <Text style ={HomeStyles.textButton}> Información de servicio </Text>
-                                    </TouchableOpacity>
-                            </View>
-                        </View>
-                        <View>
-                            <ModalInfo show={showModal} onClose = {() => setShowModal(false)}/>
                         </View>
                     </View>
                 </View>

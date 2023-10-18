@@ -3,9 +3,11 @@ import React                    from 'react';
 import { createStackNavigator } from '@react-navigation/stack';
 import {ColorsStyle}            from '../../style/ColorsStyle';
 import LoginScreen              from '../../screens/LoginScreen';
-import RegisterScreen           from '../../screens/RegisterScreen';
+import RegisterOwnerPetScreen           from '../../screens/RegisterOwnerPetScreen';
 import { ProfileScreen }        from '../../screens/ProfileScreen';
 import PlanningScreen from '../../screens/PlanningScreen';
+import { RegisterTypeScreen } from '../../screens/RegisterTypeScreen';
+import RegisterWalkerScreen from '../../screens/RegisterWalkerScreen';
 
 export type RootStackParams = {
     LoginScreen          : undefined;
@@ -19,7 +21,7 @@ const Stack = createStackNavigator();
 const StackNavigatorHGM = () => {
     return (
         <Stack.Navigator
-            initialRouteName  = "ListCasesHGMScreen"
+            initialRouteName  = "LoginScreen"
             screenOptions={{
                 headerStyle: {
                     elevation       : 3,
@@ -30,24 +32,34 @@ const StackNavigatorHGM = () => {
                 },
             }}>
             <Stack.Screen
-                name          = "LoginScreen"
-                options       = {{title: 'Login'}}
-                component     = {LoginScreen}
+                name        = "LoginScreen"
+                options     = {{title: 'Login'}}
+                component   = {LoginScreen}
             />
             <Stack.Screen
-                name          = "RegisterScreen"
-                options       = {{title: 'Perfil'}}
-                component     = {RegisterScreen}
+                name        = "RegisterTypeScreen"
+                options     = {{title: 'RegisterTypeScreen'}}
+                component   = {RegisterTypeScreen}
             />
             <Stack.Screen
-                name          = "ProfileScreen"
-                options       = {{title: 'Perfil'}}
-                component     = {ProfileScreen}
+                name        = "RegisterOwnerPetScreen"
+                options     = {{title: 'RegisterOwnerPetScreen'}}
+                component   = {RegisterOwnerPetScreen}
             />
             <Stack.Screen
-                name = 'PlanningScreen'
-                options = {{title:'Viaje'}}
-                component={PlanningScreen}
+                name        = "RegisterWalkerScreen"
+                options     = {{title: 'RegisterWalkerScreen'}}
+                component   = {RegisterWalkerScreen}
+            />
+            <Stack.Screen
+                name        = "ProfileScreen"
+                options     = {{title: 'Perfil'}}
+                component   = {ProfileScreen}
+            />
+            <Stack.Screen
+                name        = 'PlanningScreen'
+                options     = {{title:'Viaje'}}
+                component   ={PlanningScreen}
             />
 
             </Stack.Navigator>
