@@ -17,7 +17,7 @@ export const IconOptionsApp = (_name: string = '', _color: string = ColorsStyle.
             break;
 
         case 'Registro':
-            iconName = 'paw';
+            iconName = 'help-circle';
             sizeIcon = 40;
             break;
 

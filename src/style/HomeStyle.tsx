@@ -1,43 +1,51 @@
-import {StyleSheet}       from  'react-native';
-import { ColorsStyle } from './ColorsStyle';
-import { box_height } from './DimensionStyle';
+import {StyleSheet}     from 'react-native';
+import { ColorsStyle }  from './ColorsStyle';
+import { box_height }   from './DimensionStyle';
+import { blue } from 'react-native-reanimated/lib/typescript/reanimated2/Colors';
 
 
 export const HomeStyles = StyleSheet.create({
 
   container                     : {
-    flex                    : 2,
     flexDirection           : 'column',
     backgroundColor         : ColorsStyle.secundary,
+    height                  : '100%',
+
 
   },
   box                           : {
     height                  : box_height,
   },
+
   boxHeader                     : {
-    flex                    : 0.5,
+    bottom                  : '10%',
     width                   : '100%',
-    height                  : 150,
+    height                  : '20%',
     alignItems              : 'center',
-
   },
+
   boxBody                       : {
-    flex                    : 1,
+    top                     : '35%',
     alignSelf               : 'center',
-    height                  : '80%',
+    height                  : '100%',
+    paddingTop              : 100,
+    paddingBottom           : '80%',
+
   },
 
-  boxFooter                     : {
-    flex                    : 0.5,
-    height                  : 200,
+
+  image              : {
+    width             : 200,
+    height            : 200,
+    borderRadius      : 100,
   },
 
   containerTitle                : {
     backgroundColor         : ColorsStyle.primary,
     justifyContent          : 'center',
     alignItems              : 'center',
-    borderTopLeftRadius     : 20,
-    borderTopRightRadius    : 20,
+    borderTopLeftRadius     : 50,
+    borderTopRightRadius    : 50,
     padding                 : 10,
     width                   : '90%',
   },
@@ -52,7 +60,8 @@ export const HomeStyles = StyleSheet.create({
   },
 
   containerGroupButtons         : {
-    top                     : 0,
+    top                     : '0%',
+
   },
 
   containerButtons              : {
@@ -64,24 +73,24 @@ export const HomeStyles = StyleSheet.create({
   },
 
   button                        : {
-    width                   : 120,
-    height                  : 100,
+    width                   : 150,
+    height                  : 65,
     backgroundColor         : ColorsStyle.tertiary,
     borderColor             : ColorsStyle.borderTertiary,
     justifyContent          : 'center',
-    borderRadius            : 20,
-    borderWidth             : 1.5,
+    borderRadius            : 50,
+    borderWidth             : 2,
     alignItems              : 'center',
   },
 
   buttonHorizontal              : {
     width                   : 300,
-    height                  : 100,
+    height                  : 60,
     backgroundColor         : ColorsStyle.tertiary,
     borderColor             : ColorsStyle.borderTertiary,
     justifyContent          : 'center',
-    borderRadius            : 20,
-    borderWidth             : 1.5,
+    borderRadius            : 50,
+    borderWidth             : 2,
     alignItems              : 'center',
   },
 
