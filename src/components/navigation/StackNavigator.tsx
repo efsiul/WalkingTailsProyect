@@ -5,7 +5,7 @@ import {ColorsStyle}            from '../../style/ColorsStyle';
 import LoginScreen              from '../../screens/LoginScreen';
 import RegisterScreen           from '../../screens/RegisterScreen';
 import { ProfileScreen }        from '../../screens/ProfileScreen';
-import PlanningScreen from '../../screens/PlanningScreen';
+import {PlanningScreen} from '../../screens/PlanningScreen';
 
 export type RootStackParams = {
     LoginScreen          : undefined;
