@@ -7,7 +7,12 @@ export const IconOptionsApp = (_name: string = '', _color: string = ColorsStyle.
     let sizeIcon: number = 0;
 
     switch (_name) {
-        case 'Volver al inicio':
+        case 'persona':
+            iconName = 'account';
+            sizeIcon = 40;
+            break;
+            
+        case 'pata':
             iconName = 'paw';
             sizeIcon = 40;
             break;

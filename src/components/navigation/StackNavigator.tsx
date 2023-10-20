@@ -3,11 +3,11 @@ import React                    from 'react';
 import { createStackNavigator } from '@react-navigation/stack';
 import {ColorsStyle}            from '../../style/ColorsStyle';
 import LoginScreen              from '../../screens/LoginScreen';
-import RegisterOwnerPetScreen           from '../../screens/RegisterOwnerPetScreen';
+import RegisterOwnerPetScreen   from '../../screens/RegisterOwnerPetScreen';
 import { ProfileScreen }        from '../../screens/ProfileScreen';
-import PlanningScreen from '../../screens/PlanningScreen';
-import { RegisterTypeScreen } from '../../screens/RegisterTypeScreen';
-import RegisterWalkerScreen from '../../screens/RegisterWalkerScreen';
+import {PlanningScreen}         from '../../screens/PlanningScreen';
+import { RegisterTypeScreen }   from '../../screens/RegisterTypeScreen';
+import RegisterWalkerScreen     from '../../screens/RegisterWalkerScreen';
 
 export type RootStackParams = {
     LoginScreen          : undefined;
