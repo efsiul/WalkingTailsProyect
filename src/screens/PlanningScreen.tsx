@@ -1,12 +1,32 @@
-import { StyleSheet, Text, View, TouchableOpacity } from 'react-native'
-import React from 'react'
-import { PlanningStyles } from '../style/PlanningStyle'
-import MenuButtons from '../components/buttonMenu/MenuButtons'
-import LabelContainers from '../components/labelContainer/LabelContainers'
-import { IconOptionsApp } from '../style/IconOptionsApp';
-import { LabelContainerStyle } from '../style/LabelContainerStyle'
+import React,{
+    useEffect,
+    useState 
+    }                           from 'react'
+import {
+    StyleSheet,
+    Text,
+    View,
+    TouchableOpacity
+    }                           from 'react-native'
+import { PlanningStyles }       from '../style/PlanningStyle'
+import MenuButtons              from '../components/buttonMenu/MenuButtons'
+import LabelContainers          from '../components/labelContainer/LabelContainers'
+import { LabelContainerStyle }  from '../style/LabelContainerStyle'
+import { DrawerScreenProps }    from '@react-navigation/drawer';
+import { ModalInfo }            from '../components/ModalInfo';
+import { IconOptionsApp }       from '../style/IconOptionsApp';
 
-export default function PlanningScreen() {
+interface Props extends DrawerScreenProps<any, any>{}
+
+export const PlanningScreen = ({navigation}: Props) => {
+    const [showModal, setShowModal] = useState(false);
+
+    useEffect(() => {
+        navigation.setOptions({
+
+        })
+    }, [])
+
     return (
         <View style={PlanningStyles.container}>
             <View style={PlanningStyles.topContainer}>
@@ -23,7 +43,7 @@ export default function PlanningScreen() {
                 />
                 <TouchableOpacity
                     style={LabelContainerStyle.bottomButton}
-                    onPress={() => {/*TODO*/ }}
+                    onPress={() => { navigation.navigate('RideScreen') }}
                 >
                     <Text style={LabelContainerStyle.buttonText}>Find Walker</Text>
                 </TouchableOpacity>
