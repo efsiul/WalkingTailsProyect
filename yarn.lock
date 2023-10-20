@@ -818,10 +818,7 @@
   resolved "https://registry.npmjs.org/@babel/plugin-transform-parameters/-/plugin-transform-parameters-7.22.15.tgz"
   integrity sha512-hjk7qKIqhyzhhUvRT683TYQOFa/4cQKwQy7ALvTpODswN40MljzNDa0YldevS6tGbxwaEKVn502JmY0dP7qEtQ==
   dependencies:
-    "@babel/helper-plugin-utils" "^7.22.5"                        </Text>
-                    </View>
-                </TouchableOpacity>
-                <SafeAreaView  style   = {DrawerStyles.containerButtons}>
+    "@babel/helper-plugin-utils" "^7.22.5"
 
 "@babel/plugin-transform-private-methods@^7.22.5":
   version "7.22.5"

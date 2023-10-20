@@ -1,9 +1,13 @@
-import { StyleSheet, Text, View } from 'react-native'
-import React, { useState } from 'react'
-import { DropDownStyle } from '../../style/DropDownStyle';
-import { Dropdown } from 'react-native-element-dropdown';
-import { IconOptionsApp } from '../../style/IconOptionsApp';
-import { ColorsStyle } from '../../style/ColorsStyle';
+import React,{
+    useState,
+    }                       from 'react'
+import {
+    Text,
+    View,
+    }                       from 'react-native'
+import { Dropdown }         from 'react-native-element-dropdown';
+import { IconOptionsApp }   from '../../style/IconOptionsApp';
+import { DropDownStyle }    from '../../style/DropDownStyle';
 
 const data = [
     { label: 'Solo ride', value: '1' },
@@ -29,7 +33,7 @@ const MyDropDown = () => {
     return (
         <View style={DropDownStyle.container}>
             <View style={{ flexDirection: 'row', alignItems: 'center' }}>
-                <View style={DropDownStyle.iconStyles}>
+                <View>
                 {IconOptionsApp('pata')}
                 </View>
                 <Text style={DropDownStyle.textStyle }>Choose trip:</Text>
