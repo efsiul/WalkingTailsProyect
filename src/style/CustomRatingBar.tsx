@@ -7,7 +7,7 @@ import CustomRatingBar from '../components/customRatingBar/CustomRatingBar';
 export const CustomRatingBarStyles = StyleSheet.create({
     container: {
         flex: 1,
-        padding: 10,
+        padding: 20,
         justifyContent: 'center',
         color:'white'
     },

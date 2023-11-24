@@ -1,25 +1,26 @@
-import React,{
+import React, {
     useEffect,
-    useState 
-    }                           from 'react'
+    useState
+} from 'react'
 import {
     StyleSheet,
     Text,
     View,
     TouchableOpacity
-    }                           from 'react-native'
-import { PlanningStyles }       from '../style/PlanningStyle'
-import MenuButtons              from '../components/buttonMenu/MenuButtons'
-import LabelContainers          from '../components/labelContainer/LabelContainers'
-import { LabelContainerStyle }  from '../style/LabelContainerStyle'
-import { DrawerScreenProps }    from '@react-navigation/drawer';
-import { ModalInfo }            from '../components/ModalInfo';
-import { IconOptionsApp }       from '../style/IconOptionsApp';
+} from 'react-native'
+import { PlanningStyles } from '../style/PlanningStyle'
+import MenuButtons from '../components/buttonMenu/MenuButtons'
+import LabelContainers from '../components/labelContainer/LabelContainers'
+import { LabelContainerStyle } from '../style/LabelContainerStyle'
+import { DrawerScreenProps } from '@react-navigation/drawer';
+import MapComponent from '../components/mapComponent/MapComponent';
+import { useAppState } from '../context/AppStateContext'
 
-interface Props extends DrawerScreenProps<any, any>{}
+interface Props extends DrawerScreenProps<any, any> { }
 
-export const PlanningScreen = ({navigation}: Props) => {
+export const PlanningScreen = ({ navigation }: Props) => {
     const [showModal, setShowModal] = useState(false);
+    const { setRoute, selectedRoute } = useAppState(); // Accede al estado global
 
     useEffect(() => {
         navigation.setOptions({
@@ -27,11 +28,14 @@ export const PlanningScreen = ({navigation}: Props) => {
         })
     }, [])
 
+    const handleTraceRoute = (route: any) => {
+        setRoute(route); // Almacena la selección de ruta en el estado global
+    };
+
     return (
         <View style={PlanningStyles.container}>
             <View style={PlanningStyles.topContainer}>
-                {/* TODO logica del google maps*/}
-                <Text>Espacio para Maps</Text>
+                <MapComponent route={[selectedRoute]} />
             </View>
             <View style={PlanningStyles.middleContainer}>
                 <MenuButtons />
@@ -43,7 +47,10 @@ export const PlanningScreen = ({navigation}: Props) => {
                 />
                 <TouchableOpacity
                     style={LabelContainerStyle.bottomButton}
-                    onPress={() => { navigation.navigate('RideScreen') }}
+                    onPress={() => {
+                        handleTraceRoute(selectedRoute);
+                        navigation.navigate('RideScreen');
+                    }}
                 >
                     <Text style={LabelContainerStyle.buttonText}>Find Walker</Text>
                 </TouchableOpacity>
