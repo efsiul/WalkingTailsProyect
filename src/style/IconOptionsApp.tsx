@@ -1,6 +1,6 @@
-import React from 'react';
-import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
-import { ColorsStyle } from './ColorsStyle';
+import React                    from 'react';
+import MaterialCommunityIcons   from 'react-native-vector-icons/MaterialCommunityIcons';
+import { ColorsStyle }          from './ColorsStyle';
 
 export const IconOptionsApp = (_name: string = '', _color: string = ColorsStyle.secundary) => {
     let iconName: string = '';

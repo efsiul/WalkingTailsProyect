@@ -1,8 +1,4 @@
-import { StyleSheet } from "react-native";
-import { ColorsStyle } from "./ColorsStyle";
-import { box_height } from "./DimensionStyle";
-import DateTimePicker from '@react-native-community/datetimepicker';
-import DropDown from '../components/dropDonwComponent/DropDown';
+import { StyleSheet }   from "react-native";
 
 export const DropDownStyle = StyleSheet.create({
     container: {
