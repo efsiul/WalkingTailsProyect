@@ -1,16 +1,18 @@
 import { StyleSheet, Text, View } from 'react-native'
 import React from 'react'
-import { AboutWalkerStyle } from '../../style/AboutWalkerStyle'
-import CustomRatingBar from '../customRatingBar/CustomRatingBar'
+import { DogWalkerStyle } from '../../style/AboutWalkerStyle'
 
 const AboutWalker = () => {
     return (
-        <View style={AboutWalkerStyle.container}>
-            <View style={AboutWalkerStyle.topContainer}>
+        <View style={DogWalkerStyle.container}>
+            <View style={DogWalkerStyle.topContainer}>
 
             </View>
-            <View style={AboutWalkerStyle.bottomContainer}>
+            <View style={DogWalkerStyle.middleContainer}>
                 
+            </View>
+            <View style={DogWalkerStyle.bottomContainer}>
+
             </View>
         </View>
     )

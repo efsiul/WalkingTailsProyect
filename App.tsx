@@ -1,17 +1,21 @@
 /* eslint-disable react-hooks/exhaustive-deps */
-import React                    from 'react';
-import {NavigationContainer}    from '@react-navigation/native';
-import DrawerNavigator          from './src/components/navigation/DrawerNavigation';
+import React from 'react';
+import { NavigationContainer } from '@react-navigation/native';
+import DrawerNavigator from './src/components/navigation/DrawerNavigation';
+import { AppStateProvider } from './src/context/AppStateContext';
 
 
 
-const App = ()=> {
+const App = () => {
 
 
   return (
-    <NavigationContainer>
-          <DrawerNavigator/>
-    </NavigationContainer>
+    <AppStateProvider>
+      <NavigationContainer>
+        <DrawerNavigator />
+      </NavigationContainer>
+    </AppStateProvider>
+
   );
 };
 
