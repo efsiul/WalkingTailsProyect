@@ -39,27 +39,27 @@ const MyDropDown = () => {
                 <Text style={DropDownStyle.textStyle }>Choose trip:</Text>
                 <View style={{ maxWidth: 260, flex: 1 }}>
                     <Dropdown
-                        style={[DropDownStyle.dropdown, isFocus && { borderColor: '#fff' }]}
-                        placeholderStyle={DropDownStyle.placeholderStyle}
-                        selectedTextStyle={DropDownStyle.selectedTextStyle}
-                        inputSearchStyle={DropDownStyle.inputSearchStyle}
-                        data={data}
+                        style               = {[DropDownStyle.dropdown, isFocus && { borderColor: '#fff' }]}
+                        placeholderStyle    = {DropDownStyle.placeholderStyle}
+                        selectedTextStyle   = {DropDownStyle.selectedTextStyle}
+                        inputSearchStyle    = {DropDownStyle.inputSearchStyle}
+                        data                = {data}
                         search
-                        maxHeight={200}
-                        labelField="label"
-                        valueField="value"
-                        placeholder={isFocus ? '...' : 'Choose trip'}
-                        searchPlaceholder="Search..."
-                        value={value}
-                        onFocus={() => setIsFocus(true)}
-                        onBlur={() => setIsFocus(false)}
-                        onChange={(item: { value: React.SetStateAction<string | null>; }) => {
-                            setValue(item.value);
-                            setIsFocus(false);
-                        }}
+                        maxHeight           = {200}
+                        labelField          = "label"
+                        valueField          = "value"
+                        placeholder         = {!isFocus ? 'Choose trip' : '...'}
+                        searchPlaceholder   = "Search..."
+                        value               = {value}
+                        onFocus             = {() => setIsFocus(true)}
+                        onBlur              = {() => setIsFocus(false)}
+                        onChange            = {(item: { value: React.SetStateAction<string | null>; }) => {
+                                                    setValue(item.value);
+                                                    setIsFocus(false);
+                                                }
+                                            }
                     />
                 </View>
-
             </View>
         </View>
     )

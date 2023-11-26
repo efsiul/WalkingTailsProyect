@@ -11,7 +11,7 @@ export const RideStyles = StyleSheet.create({
         backgroundColor: 'white',
     },
     middleContainer: {
-        flex: 2,
+        flex: 3,
         backgroundColor: '#000'
     },
     bottomContainer: {
