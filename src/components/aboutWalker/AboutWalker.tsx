@@ -1,6 +1,6 @@
-import { StyleSheet, Text, View } from 'react-native'
-import React from 'react'
-import { DogWalkerStyle } from '../../style/AboutWalkerStyle'
+import React                from 'react'
+import {View }              from 'react-native'
+import { DogWalkerStyle }   from '../../style/AboutWalkerStyle'
 
 const AboutWalker = () => {
     return (

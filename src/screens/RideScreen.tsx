@@ -1,21 +1,21 @@
-import { StyleSheet, Text, View } from 'react-native'
-import React, { useState } from 'react'
-import { RideStyles } from '../style/RideStyle'
-import LabelContainers from '../components/labelContainer/LabelContainers'
-import DateTimePicker,{ DateTimePickerEvent } from '@react-native-community/datetimepicker';
-import DateTime from '../components/dateTimePicker/DateTimePicker';
-import MyDropDown from '../components/dropDonwComponent/DropDown';
-import { IconOptionsApp } from '../style/IconOptionsApp';
-import { Touchable } from 'react-native';
+import React,{
+    useState,
+    }                       from 'react'
+import {
+    Text,
+    View,
+    }                       from 'react-native'
+import { RideStyles }       from '../style/RideStyle'
+import DateTime             from '../components/dateTimePicker/DateTimePicker';
+import MyDropDown           from '../components/dropDonwComponent/DropDown';
+import { IconOptionsApp }   from '../style/IconOptionsApp';
 import { TouchableOpacity } from 'react-native-gesture-handler';
-import { DropDownStyle } from '../style/DropDownStyle';
-import { color } from 'react-native-elements/dist/helpers';
-import AboutWalker from '../components/aboutWalker/AboutWalker';
-import CustomRatingBar from '../components/customRatingBar/CustomRatingBar';
-import DogWalkerProfile from '../components/imagePicker/DogWalkerprofile';
-import MapComponent from '../components/mapComponent/MapComponent';
-import { useAppState } from '../context/AppStateContext';
-import { LatLng } from 'react-native-maps';
+import { DropDownStyle }    from '../style/DropDownStyle';
+import CustomRatingBar      from '../components/customRatingBar/CustomRatingBar';
+import DogWalkerProfile     from '../components/imagePicker/DogWalkerprofile';
+import MapComponent         from '../components/mapComponent/MapComponent';
+import { useAppState }      from '../context/AppStateContext';
+import { LatLng }           from 'react-native-maps';
 
 interface AppProps {
     date: Date;
@@ -56,7 +56,7 @@ export default function RideScreen({ }) {
                     <Text style={{color:'white'}}>Modify ride</Text>
                 </TouchableOpacity>
                 </View>
-  
+
             </View>
 
             <View style={RideStyles.bottomContainer}>
