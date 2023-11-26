@@ -5,8 +5,21 @@ import { box_height } from "./DimensionStyle";
 
 export const DogWalkerStyle = StyleSheet.create({
     container: {
-        padding: 16,
+        flex: 1,
     },
+    topContainer: {
+        flex: 3,
+        backgroundColor: 'white',
+    },
+    middleContainer: {
+        flex: 1,
+        backgroundColor: '#001219'
+    },
+    bottomContainer: {
+        flex: 3,
+        backgroundColor: '#001219',
+    },
+
     title: {
         fontSize: 18,
         fontWeight: 'bold',

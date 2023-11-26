@@ -1,11 +1,15 @@
-import { StyleSheet, TouchableOpacity, Text, View } from 'react-native'
-import React from 'react'
-import { LabelContainerStyle } from '../../style/LabelContainerStyle';
-import { IconOptionsApp } from '../../style/IconOptionsApp';
+import React                    from 'react'
+import {
+    TouchableOpacity,
+    Text,
+    View,
+    }                           from 'react-native'
+import { LabelContainerStyle }  from '../../style/LabelContainerStyle';
+import { IconOptionsApp }       from '../../style/IconOptionsApp';
 
 interface LabelButtonContainerProps {
-    labels: string[];
-    buttons: string[];
+    labels:     string[];
+    buttons:    string[];
 }
 
 const LabelContainers: React.FC<LabelButtonContainerProps> = ({ labels, buttons }) => {

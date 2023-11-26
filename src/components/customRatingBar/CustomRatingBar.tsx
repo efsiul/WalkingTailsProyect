@@ -1,13 +1,18 @@
-import { Image, StyleSheet, Text, View, TouchableOpacity } from 'react-native'
-import React, { useState } from 'react'
-import { CustomRatingBarStyles } from '../../style/CustomRatingBar'
-import { SafeAreaView } from 'react-native-safe-area-context'
+import React, { useState }          from 'react'
+import {
+    Text,
+    View,
+    Image,
+    TouchableOpacity 
+    }                               from 'react-native'
+import { CustomRatingBarStyles }    from '../../style/CustomRatingBar'
+import { SafeAreaView }             from 'react-native-safe-area-context'
 
 
 const CustomRatingBar = () => {
 
     const [defaultRating, setDefaultRating] = useState(2)
-    const [maxRating, setMaxRating] = useState([1, 2, 3, 4, 5])
+    const [maxRating, setMaxRating]         = useState([1, 2, 3, 4, 5])
 
     const startImgFilled = 'https://raw.githubusercontent.com/tranhonghan/images/main/star_filled.png'
     const startImgCorner = 'https://raw.githubusercontent.com/tranhonghan/images/main/star_corner.png'

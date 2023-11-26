@@ -1,17 +1,21 @@
-import { Button, Platform, StyleSheet, Text, View } from 'react-native';
-import React, { useState } from 'react';
-import { StatusBar } from 'react-native';
-import DateTimePicker from '@react-native-community/datetimepicker';
-import { DateTimePickerStyle } from '../../style/DateTimePickerStyle';
-import { TouchableOpacity } from 'react-native-gesture-handler';
-import { IconOptionsApp } from '../../style/IconOptionsApp';
+import React, { useState }      from 'react';
+import {
+    StatusBar,
+    Platform,
+    Text,
+    View,
+    }                           from 'react-native';
+import DateTimePicker           from '@react-native-community/datetimepicker';
+import { DateTimePickerStyle }  from '../../style/DateTimePickerStyle';
+import { TouchableOpacity }     from 'react-native-gesture-handler';
+import { IconOptionsApp }       from '../../style/IconOptionsApp';
 
 export default function DateTime() {
-    const [date, setDate] = useState(new Date());
-    const [time, setTime] = useState(new Date());
-    const [showDate, setShowDate] = useState(false);
-    const [showTime, setShowTime] = useState(false);
-    const [ampm, setAmPm] = useState("AM");
+    const [date, setDate]           = useState(new Date());
+    const [time, setTime]           = useState(new Date());
+    const [showDate, setShowDate]   = useState(false);
+    const [showTime, setShowTime]   = useState(false);
+    const [ampm, setAmPm]           = useState("AM");
 
     const onChangeDate = (event: any, selectedDate: Date | undefined) => {
         setShowDate(Platform.OS === 'ios');
@@ -30,7 +34,7 @@ export default function DateTime() {
     return (
         <View style={DateTimePickerStyle.container}>
             <View style={DateTimePickerStyle.buttonContainer}>
-            {IconOptionsApp('pata')}
+                {IconOptionsApp('pata')}
                 <TouchableOpacity
                     onPress={() => setShowDate(true)}
                 >
@@ -38,12 +42,12 @@ export default function DateTime() {
                 </TouchableOpacity>
                 {showDate && (
                     <DateTimePicker
-                        testID="Date"
-                        value={date}
-                        mode="date"
-                        is24Hour={true}
-                        display="default"
-                        onChange={onChangeDate}
+                        testID  = "Date"
+                        value   = {date}
+                        mode    = "date"
+                        is24Hour= {true}
+                        display = "default"
+                        onChange= {onChangeDate}
                     />
                 )}
                 <Text style={DateTimePickerStyle.dateTimeText}>
@@ -54,17 +58,18 @@ export default function DateTime() {
             <View style={DateTimePickerStyle.buttonContainer}>
                 {IconOptionsApp('pata')}
                 <TouchableOpacity
-                    onPress={() => setShowTime(true)}>
+                    onPress={() => setShowTime(true)}
+                >
                     <Text style={DateTimePickerStyle.dateTimeText}>Schedule: </Text>
                 </TouchableOpacity>
                 {showTime && (
                     <DateTimePicker
-                        testID="timePicker"
-                        value={time}
-                        mode="time"
-                        is24Hour={false}
-                        display="default"
-                        onChange={onChangeTime}
+                        testID  = "timePicker"
+                        value   = {time}
+                        mode    = "time"
+                        is24Hour= {false}
+                        display = "default"
+                        onChange= {onChangeTime}
                     />
                 )}
                 <Text style={DateTimePickerStyle.dateTimeText}>

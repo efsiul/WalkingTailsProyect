@@ -1,8 +1,11 @@
-import { StyleSheet, Text, View } from 'react-native';
-import React from 'react';
+import React                from 'react';
+import {
+  Text,
+  View 
+  }                         from 'react-native';
 import { MenuButtonStyles } from '../../style/MenuButtonStyle';
 import { TouchableOpacity } from 'react-native-gesture-handler';
-import { IconOptionsApp } from '../../style/IconOptionsApp';
+import { IconOptionsApp }   from '../../style/IconOptionsApp';
 
 const MenuButtons = () => {
   return (
