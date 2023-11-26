@@ -48,7 +48,7 @@ const MyDropDown = () => {
                         maxHeight={200}
                         labelField="label"
                         valueField="value"
-                        placeholder={!isFocus ? 'Choose trip' : '...'}
+                        placeholder={isFocus ? '...' : 'Choose trip'}
                         searchPlaceholder="Search..."
                         value={value}
                         onFocus={() => setIsFocus(true)}

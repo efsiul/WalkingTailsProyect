@@ -40,7 +40,6 @@ export const HomeScreen = ({ navigation }: Props) => {
                 fontSize            : 30,
                 fontWeight          : 'bold',
                 color               : ColorsStyle.secundary,
-
             },
 
         }
