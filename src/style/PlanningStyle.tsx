@@ -19,4 +19,20 @@ export const PlanningStyles = StyleSheet.create({
         flex: 3,
         backgroundColor: '#001219',
     },
+    hideShow:{
+        backgroundColor: '#001219',
+    },
+    toggleButton: {
+        backgroundColor: ColorsStyle.trackColorSwitch2,
+        padding: 6,
+        marginTop: 10,
+        borderRadius: 10,
+        alignSelf: 'center',
+        bottom: 5
+    },
+    toggleButtonText: {
+        color: ColorsStyle.primary,
+        fontSize: 12
+    },
+    
 })
